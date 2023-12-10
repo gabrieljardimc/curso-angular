@@ -1,0 +1,15 @@
+<div class="aula">
+    <p>two-way-biding works!</p>
+    <form (ngSubmit)="incluiAnimal(nome,tipo,idade)">
+        <input type="text" [(ngModel)]='nome' name="nome" 
+            placeholder="Digite o seu nome">
+        <input type="text" [(ngModel)]='tipo' name="tipo" 
+            placeholder="Digite o tipo">
+        <input type="number" [(ngModel)]='idade' name="idade" 
+            placeholder="Digite a idade">
+        <input type="submit" value="Enviar">
+    </form>
+    <div *ngIf="nome!='' ">
+        <p>O ({{ tipo }} de nome {{ nome }} tem {{ idade }} ano(s) de idade</p>
+    </div>
+</div>
